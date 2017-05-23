@@ -1,0 +1,16 @@
+{
+  "name": "puppet-cloudbreak",
+  "version": "0.0.1",
+  "author": "gudari",
+  "summary": "Puppet module to install and manage cloudbreak.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/gudari/puppet-cloudbreak.git",
+  "project_page": "https://github.com/gudari/puppet-cloudbreak",
+  "issues_url": "https://github.com/gudari/puppet-cloudbreak/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"garethr-docker","version_requirement":">= 5.0.0"}
+  ],
+  "data_provider": null
+}
+
