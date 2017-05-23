@@ -5,7 +5,8 @@ class cloudbreak::install {
     manage_package => true,
   }
 
-  archive { "${cloudbreak::download_dor}/${cloudbreak::basefilename}":
+
+  archive { "${cloudbreak::download_dir}/${cloudbreak::basefilename}":
     ensure          => present,
     extract         => true,
     extract_command => 'tar xz %s cbd',
