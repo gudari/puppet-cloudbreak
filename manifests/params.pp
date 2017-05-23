@@ -4,12 +4,11 @@ class cloudbreak::params {
   $docker_version   = '1.9.0'
   $extract_dir      = '/bin/'
   $download_dir     = '/var/tmp/cloudbreak'
-  $mirror_url       = 'http://s3.amazonaws.com/public-repo-1.hortonwork.com/HDP/cloudbreak'
+  $mirror_url       = 'https://github.com/sequenceiq/cloudbreak-deployer/releases/download'
 
   $cloudbreak_group = 'cloudbreak'
   $cloudbreak_gid   = undef
   $cloudbreak_user  = 'cloudbreak'
   $cloudbreak_uid   = undef
-
 
 }
