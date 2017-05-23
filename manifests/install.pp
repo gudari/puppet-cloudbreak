@@ -10,9 +10,9 @@ class cloudbreak::install {
     ensure          => present,
     extract         => true,
     extract_command => 'tar xz %s cbd',
-    extract_path    => $cloudbreak::extractdir,
+    extract_path    => $cloudbreak::extract_dir,
     source          => $cloudbreak::package_url,
-    creates         => "${cloudbreak::extractdir}/cbd",
+    creates         => "${cloudbreak::extract_dir}/cbd",
   }
 
 }
