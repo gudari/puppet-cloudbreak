@@ -5,6 +5,9 @@ class cloudbreak::install {
     manage_package => true,
   }
 
+  file { $cloudbreak::extract_dir:
+    ensure => directory,
+  }
 
   archive { "${cloudbreak::download_dir}/${cloudbreak::basefilename}":
     ensure          => present,
@@ -13,6 +16,7 @@ class cloudbreak::install {
     extract_path    => $cloudbreak::extract_dir,
     source          => $cloudbreak::package_url,
     creates         => "${cloudbreak::extract_dir}/cbd",
+    require         => File[$cloudbreak::extract_dir],
   }
 
 }
