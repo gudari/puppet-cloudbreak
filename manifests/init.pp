@@ -51,6 +51,7 @@ class cloudbreak (
   $extract_dir      = $cloudbreak::params::extract_dir,
   $download_dir     = $cloudbreak::params::download_dir,
   $mirror_url       = $cloudbreak::params::mirror_url,
+  $extract_dir      = "cloudbreak-deployer_${version}",
   $basefilename     = "cloudbreak-deployer_${version}_${::kernel}_${::processors['isa']}.tgz",
   $package_url      = "${mirror_url}/v${version}/${basefilename}",
 
