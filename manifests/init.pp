@@ -58,7 +58,7 @@ class cloudbreak (
   $cloudbreak_gid   = $cloudbreak::params::cloudbreak_gid,
   $cloudbreak_user  = $cloudbreak::params::cloudbreak_user,
   $cloudbreak_uid   = $cloudbreak::params::cloudbreak_uid,
-  
+
 ) inherits cloudbreak::params {
 
   group { $cloudbreak_group:
@@ -69,7 +69,7 @@ class cloudbreak (
   user { $cloudbreak_user:
     ensure  => present,
     uid     => $cloudbreak_uid,
-    groups  => $nifi_group,
+    groups  => $cloudbreak_group,
     require => Group[ $cloudbreak_group ],
   }
 
