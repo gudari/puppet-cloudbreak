@@ -48,7 +48,6 @@ class cloudbreak (
   $docker_version   = $cloudbreak::params::docker_version,
 
   $base_url         = $cloudbreak::params::base_url,
-  $extract_dir      = $cloudbreak::params::extract_dir,
   $download_dir     = $cloudbreak::params::download_dir,
   $mirror_url       = $cloudbreak::params::mirror_url,
   $extract_dir      = "cloudbreak-deployer_${version}",
