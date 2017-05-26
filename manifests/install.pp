@@ -1,7 +1,8 @@
 class cloudbreak::install {
 
   class { '::docker':
-    version        => $cloudbreak::docker_version,
+    version      => $cloudbreak::docker_version,
+    package_name => 'docker-engine',
   }
 
   file { $cloudbreak::extract_dir:
